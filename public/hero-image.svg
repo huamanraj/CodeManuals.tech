@@ -1,0 +1,48 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ecf8e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Code editor mockup -->
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#1e293b" stroke="#3ecf8e" stroke-width="2"/>
+  
+  <!-- Editor header -->
+  <rect x="50" y="50" width="300" height="30" rx="8" fill="#334155"/>
+  <circle cx="70" cy="65" r="4" fill="#ef4444"/>
+  <circle cx="85" cy="65" r="4" fill="#f59e0b"/>
+  <circle cx="100" cy="65" r="4" fill="#10b981"/>
+  
+  <!-- Code lines -->
+  <rect x="70" y="100" width="80" height="4" rx="2" fill="url(#grad1)"/>
+  <rect x="160" y="100" width="60" height="4" rx="2" fill="#64748b"/>
+  <rect x="230" y="100" width="40" height="4" rx="2" fill="#3ecf8e"/>
+  
+  <rect x="70" y="120" width="40" height="4" rx="2" fill="#64748b"/>
+  <rect x="120" y="120" width="100" height="4" rx="2" fill="url(#grad1)"/>
+  <rect x="230" y="120" width="60" height="4" rx="2" fill="#64748b"/>
+  
+  <rect x="70" y="140" width="120" height="4" rx="2" fill="#3ecf8e"/>
+  <rect x="200" y="140" width="80" height="4" rx="2" fill="#64748b"/>
+  
+  <rect x="70" y="160" width="60" height="4" rx="2" fill="#64748b"/>
+  <rect x="140" y="160" width="90" height="4" rx="2" fill="url(#grad1)"/>
+  
+  <rect x="70" y="180" width="200" height="4" rx="2" fill="#3ecf8e"/>
+  
+  <rect x="70" y="200" width="40" height="4" rx="2" fill="#64748b"/>
+  <rect x="120" y="200" width="70" height="4" rx="2" fill="url(#grad1)"/>
+  
+  <!-- Floating elements -->
+  <circle cx="80" cy="40" r="3" fill="#3ecf8e" opacity="0.6"/>
+  <circle cx="320" cy="45" r="2" fill="#2dd4bf" opacity="0.8"/>
+  <circle cx="370" cy="80" r="4" fill="#3ecf8e" opacity="0.4"/>
+  <circle cx="30" cy="120" r="2" fill="#2dd4bf" opacity="0.7"/>
+  <circle cx="380" cy="200" r="3" fill="#3ecf8e" opacity="0.5"/>
+  <circle cx="25" cy="250" r="2" fill="#2dd4bf" opacity="0.6"/>
+</svg>

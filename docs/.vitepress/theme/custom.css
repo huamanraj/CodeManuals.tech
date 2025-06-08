@@ -1,0 +1,491 @@
+/* Import Outfit font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Light mode colors (default) */
+  --vp-c-bg: #fafafa;
+  --vp-c-bg-alt: #f5f5f5;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-text-1: #121212;
+  --vp-c-text-2: #242424;
+  --vp-c-text-3: #313131;
+  
+  /* Brand colors */
+  --vp-c-brand-1: #006239;
+  --vp-c-brand-2: #004d2d;
+  --vp-c-brand-3: #003d24;
+  --vp-c-brand-soft: rgba(0, 98, 57, 0.14);
+  
+  /* UI colors */
+  --vp-c-divider: #292929;
+  --vp-c-border: #292929;
+  --vp-c-gutter: #e2e8f0;
+  
+  /* Sidebar colors */
+  --vp-sidebar-bg-color: #ffffff;
+  --vp-c-bg-sidebar: #ffffff;
+  
+  /* Custom spacing */
+  --vp-layout-max-width: 1440px;
+  --border-radius: 0.5rem;
+  
+  /* Font family */
+  --vp-font-family-base: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+/* Dark mode colors */
+.dark {
+  --vp-c-bg: #121212;
+  --vp-c-bg-alt: #171717;
+  --vp-c-bg-elv: #242424;
+  --vp-c-text-1: #e2e8f0;
+  --vp-c-text-2: #fafafa;
+  --vp-c-text-3: #a9a9a9;
+  
+  /* Brand colors for dark mode */
+  --vp-c-brand-1: #4ade80;
+  --vp-c-brand-2: #22c55e;
+  --vp-c-brand-3: #16a34a;
+  --vp-c-brand-soft: rgba(74, 222, 128, 0.14);
+  
+  /* UI colors for dark mode */
+  --vp-c-divider: #292929;
+  --vp-c-border: #292929;
+  --vp-c-gutter: #1f1f1f;
+  
+  /* Sidebar colors for dark mode */
+  --vp-sidebar-bg-color: #121212;
+  --vp-c-bg-sidebar: #121212;
+  
+  /* Input and form colors */
+  --vp-c-bg-search: #242424;
+  --vp-c-bg-mute: #1f1f1f;
+}
+
+/* Apply Outfit font globally */
+* {
+  font-family: var(--vp-font-family-base);
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+}
+
+/* Ensure proper contrast for all text elements */
+.dark .VPContent {
+  color: var(--vp-c-text-1);
+}
+
+.dark .VPSidebar {
+  background-color: var(--vp-sidebar-bg-color);
+  border-right: 1px solid var(--vp-c-border);
+}
+
+.dark .VPSidebar .title {
+  color: var(--vp-c-text-1);
+}
+
+.dark .VPSidebar .link {
+  color: #898989;
+}
+
+.dark .VPSidebar .link:hover {
+  color: var(--vp-c-text-1);
+}
+
+.dark .VPSidebar .link.active {
+  color: #dde8e3;
+  background-color: #313131;
+}
+
+/* Custom hero styling */
+.VPHero .VPImage {
+  filter: drop-shadow(0 20px 25px rgb(0 0 0 / 0.15));
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--vp-font-family-base);
+  font-weight: 700;
+}
+
+.VPHero .text {
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+  font-weight: 400;
+}
+
+/* Custom sidebar styling */
+.VPSidebar {
+  background: var(--vp-sidebar-bg-color);
+  border-right: 1px solid var(--vp-c-border);
+}
+
+/* Code block enhancements */
+.vp-code-group .tabs {
+  background: var(--vp-c-bg-alt);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.dark .vp-code-group .tabs {
+  background: #242424;
+}
+
+/* Custom button styling */
+.VPButton.brand {
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
+  border: none;
+  transition: all 0.3s ease;
+  color: #dde8e3;
+  font-family: var(--vp-font-family-base);
+  font-weight: 500;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(74, 222, 128, 0.3);
+}
+
+.dark .VPButton.brand {
+  color: #121212;
+}
+
+/* Navigation enhancements */
+.VPNavBar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.dark .VPNavBar {
+  background: rgba(18, 18, 18, 0.8);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+/* Content area improvements */
+.VPContent {
+  padding-top: 2rem;
+  color: var(--vp-c-text-1);
+}
+
+/* Custom card styling for feature sections */
+.feature-card {
+  background: linear-gradient(135deg, var(--vp-c-bg-alt) 0%, var(--vp-c-bg-elv) 100%);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 20px 40px rgba(74, 222, 128, 0.1);
+}
+
+.dark .feature-card {
+  background: linear-gradient(135deg, #171717 0%, #242424 100%);
+  color: var(--vp-c-text-1);
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--vp-c-text-1);
+}
+
+p {
+  font-family: var(--vp-font-family-base);
+  color: var(--vp-c-text-2);
+}
+
+/* Code syntax highlighting improvements */
+.vp-code {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-alt);
+  font-family: var(--vp-font-family-mono);
+}
+
+.dark .vp-code {
+  background: #242424;
+  border-color: var(--vp-c-border);
+}
+
+/* Search box styling */
+.VPNavBarSearch .DocSearch-Button {
+  background: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--border-radius);
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+}
+
+.dark .VPNavBarSearch .DocSearch-Button {
+  background: #242424;
+  color: #a9a9a9;
+}
+
+/* Footer styling */
+.VPFooter {
+  background: linear-gradient(180deg, var(--vp-c-bg) 0%, var(--vp-c-bg-alt) 100%);
+  border-top: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+}
+
+/* Ensure all links are visible */
+a {
+  color: var(--vp-c-brand-1);
+  font-family: var(--vp-font-family-base);
+}
+
+a:hover {
+  color: var(--vp-c-brand-2);
+}
+
+.dark a {
+  color: #4ade80;
+}
+
+.dark a:hover {
+  color: #22c55e;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+  font-family: var(--vp-font-family-base);
+}
+
+th, td {
+  border: 1px solid var(--vp-c-border);
+  padding: 0.75rem;
+  text-align: left;
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+}
+
+th {
+  background: var(--vp-c-bg-alt);
+  font-weight: 600;
+}
+
+.dark th {
+  background: #242424;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  background: var(--vp-c-bg-alt);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+}
+
+.dark blockquote {
+  background: #171717;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 2.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}
+
+/* Ensure proper contrast for all interactive elements */
+.VPSidebarItem .text {
+  color: #898989;
+  font-family: var(--vp-font-family-base);
+}
+
+.VPSidebarItem:hover .text {
+  color: var(--vp-c-text-1);
+}
+
+.VPSidebarItem.is-active .text {
+  color: #dde8e3;
+}
+
+/* Menu and dropdown styling */
+.VPMenu {
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--border-radius);
+}
+
+.dark .VPMenu {
+  background: #242424;
+}
+
+.VPMenuLink {
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+}
+
+.VPMenuLink:hover {
+  background: var(--vp-c-bg-alt);
+}
+
+.dark .VPMenuLink:hover {
+  background: #313131;
+}
+
+/* Ensure form elements are visible */
+input, textarea, select {
+  background: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+  border-radius: var(--border-radius);
+  font-family: var(--vp-font-family-base);
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #242424;
+  color: #e2e8f0;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+}
+
+/* Ensure all text in components is visible */
+.VPFeature .title {
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+}
+
+/* Navigation menu items */
+.VPNavBarMenuLink {
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* Ensure proper visibility for all states */
+.VPButton.alt {
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-border);
+  font-family: var(--vp-font-family-base);
+  font-weight: 500;
+}
+
+.VPButton.alt:hover {
+  background: var(--vp-c-bg-elv);
+  border-color: var(--vp-c-brand-1);
+}
+
+.dark .VPButton.alt {
+  background: #242424;
+  color: #e2e8f0;
+}
+
+.dark .VPButton.alt:hover {
+  background: #313131;
+}
+
+/* Navigation bar title */
+.VPNavBarTitle .title {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+}
+
+/* Sidebar navigation */
+.VPSidebarNav {
+  font-family: var(--vp-font-family-base);
+}
+
+/* Content headings */
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3,
+.VPDoc h4,
+.VPDoc h5,
+.VPDoc h6 {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+}
+
+/* Content paragraphs */
+.VPDoc p {
+  font-family: var(--vp-font-family-base);
+}
+
+/* Lists */
+.VPDoc ul,
+.VPDoc ol {
+  font-family: var(--vp-font-family-base);
+}
+
+/* Code blocks - keep monospace for code */
+.VPDoc pre,
+.VPDoc code {
+  font-family: var(--vp-font-family-mono);
+}
+
+/* Inline code */
+.VPDoc :not(pre) > code {
+  font-family: var(--vp-font-family-mono);
+}
