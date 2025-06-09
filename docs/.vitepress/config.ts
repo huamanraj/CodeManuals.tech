@@ -17,7 +17,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/icon.png',
     siteTitle: 'CodeManuals.tech',
     
   

@@ -58,6 +58,11 @@ features:
   font-weight: 700 !important;
 
 }
+.VPHero .tagline {
+  font-size: 1.5rem !important;
+ line-height:1.3;
+
+}
 
 .VPHero .image-container {
   width: 90% !important;
