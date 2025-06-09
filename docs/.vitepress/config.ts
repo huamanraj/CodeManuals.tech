@@ -266,8 +266,8 @@ export default defineConfig({
   appearance: 'dark',
 
   // Additional SEO configurations
-  transformHead: ({ pageData }) => {
-    const head = []
+  transformHead: ({ pageData }: { pageData: any }) => {
+    const head: any[] = []
     
     // Add page-specific meta tags
     if (pageData.frontmatter.title) {
