@@ -3,18 +3,90 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   lang: 'en-US',
   title: 'CodeManuals.tech',
-  description: 'Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development.',
+  description: 'Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development. Learn JavaScript, TypeScript, DSA, React, Node.js with clear explanations and practical examples.',
   
   head: [
-    ['meta', { name: 'keywords', content: 'programming, javascript, data structures, algorithms, web development, coding tutorials' }],
-    ['meta', { name: 'author', content: 'CodeManuals.tech' }],
+    // Basic Meta Tags
+    ['meta', { name: 'keywords', content: 'programming tutorials, javascript guide, data structures algorithms, web development, coding tutorials, typescript, react, nodejs, computer science, software engineering' }],
+    ['meta', { name: 'author', content: 'Aman Raj - CodeManuals.tech' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    ['meta', { name: 'googlebot', content: 'index, follow' }],
+    
+    // OpenGraph Meta Tags
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'CodeManuals.tech' }],
-    ['meta', { property: 'og:image', content: '/og.png' }],
+    ['meta', { property: 'og:title', content: 'CodeManuals.tech - Master Programming Concepts' }],
+    ['meta', { property: 'og:description', content: 'Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development. Learn JavaScript, TypeScript, DSA, React, Node.js with clear explanations.' }],
+    ['meta', { property: 'og:image', content: 'https://codemanuals.tech/og.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:url', content: 'https://codemanuals.tech' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+    
+    // Twitter Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: '/og.png' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
-  ],
+    ['meta', { name: 'twitter:site', content: '@codemanuals' }],
+    ['meta', { name: 'twitter:creator', content: '@amanraj_dev' }],
+    ['meta', { name: 'twitter:title', content: 'CodeManuals.tech - Master Programming Concepts' }],
+    ['meta', { name: 'twitter:description', content: 'Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development.' }],
+    ['meta', { name: 'twitter:image', content: 'https://codemanuals.tech/og.png' }],
+    
+    // Additional SEO Meta Tags
+    ['meta', { name: 'theme-color', content: '#3eaf8e' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#3eaf8e' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    
+    // Favicons and Icons
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    
+    // Canonical URL
+    ['link', { rel: 'canonical', href: 'https://codemanuals.tech' }],
+    
+    // Structured Data (JSON-LD)
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CodeManuals.tech",
+      "description": "Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development.",
+      "url": "https://codemanuals.tech",
+      "author": {
+        "@type": "Person",
+        "name": "Aman Raj",
+        "url": "https://amanraj.me"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CodeManuals.tech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://codemanuals.tech/icon.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://codemanuals.tech/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })],
+    
+    // Educational Organization Schema
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "CodeManuals.tech",
+      "url": "https://codemanuals.tech",
+      "description": "Comprehensive programming education platform offering tutorials on JavaScript, TypeScript, Data Structures, Algorithms, and Web Development.",
+      "educationalCredentialAwarded": "Programming Knowledge Certification",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Programming Fundamentals",
+        "description": "Comprehensive understanding of programming concepts, data structures, and algorithms"
+      }
+    })]
+  },
 
   themeConfig: {
     logo: '/icon.png',
@@ -167,7 +239,14 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://codemanuals.tech'
+    hostname: 'https://codemanuals.tech',
+    transformItems: (items) => {
+      return items.map((item) => ({
+        ...item,
+        changefreq: 'weekly',
+        priority: item.url === '/' ? 1.0 : 0.8
+      }))
+    }
   },
 
   cleanUrls: true,
@@ -184,5 +263,28 @@ export default defineConfig({
   },
 
   // Set dark mode as default
-  appearance: 'dark'
+  appearance: 'dark',
+
+  // Additional SEO configurations
+  transformHead: ({ pageData }) => {
+    const head = []
+    
+    // Add page-specific meta tags
+    if (pageData.frontmatter.title) {
+      head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
+      head.push(['meta', { name: 'twitter:title', content: pageData.frontmatter.title }])
+    }
+    
+    if (pageData.frontmatter.description) {
+      head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description }])
+      head.push(['meta', { name: 'twitter:description', content: pageData.frontmatter.description }])
+    }
+    
+    // Add canonical URL for each page
+    const canonicalUrl = `https://codemanuals.tech${pageData.relativePath.replace(/\.md$/, '').replace(/\/index$/, '/')}`
+    head.push(['link', { rel: 'canonical', href: canonicalUrl }])
+    head.push(['meta', { property: 'og:url', content: canonicalUrl }])
+    
+    return head
+  }
 });
