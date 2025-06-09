@@ -8,7 +8,7 @@ hero:
   text: Master Programming Concepts
   tagline: Your comprehensive guide to JavaScript, Data Structures, Algorithms, and Modern Web Development
   image:
-    src: /hero-image.svg
+    src: /heroimg.png
     alt: CodeManuals.tech
   actions:
     - theme: brand
@@ -46,6 +46,19 @@ features:
 ---
 
 <style>
+.VPHero .name {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height:0.9;
+
+}
+
+.VPHero .text {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+
+}
+
 .VPFeatures {
   margin-top: 3rem;
 }
@@ -66,5 +79,15 @@ features:
 .VPFeature .icon {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 1.8rem !important;
+  }
+  
+  .VPHero .text {
+    font-size: 2.2rem !important;
+  }
 }
 </style>

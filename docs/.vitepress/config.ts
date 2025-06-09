@@ -10,8 +10,10 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'CodeManuals.tech' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'CodeManuals.tech' }],
+    ['meta', { property: 'og:image', content: '/og.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['meta', { name: 'twitter:image', content: '/og.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
   ],
 
   themeConfig: {
@@ -121,8 +123,44 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Built with ❤️ for developers',
-      copyright: 'Copyright © 2024 CodeManuals.tech'
+      message: `
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: left;">
+            <div>
+              <h4 style="color: var(--vp-c-brand-1); margin-bottom: 1rem; font-weight: 600;">Programming Languages</h4>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="/javascript/" style="color: var(--vp-c-text-2); text-decoration: none;">JavaScript</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="/typescript/" style="color: var(--vp-c-text-2); text-decoration: none;">TypeScript</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: var(--vp-c-brand-1); margin-bottom: 1rem; font-weight: 600;">Computer Science</h4>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="/dsa/" style="color: var(--vp-c-text-2); text-decoration: none;">Data Structures</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="/dsa/algorithms" style="color: var(--vp-c-text-2); text-decoration: none;">Algorithms</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="/dsa/dynamic-programming" style="color: var(--vp-c-text-2); text-decoration: none;">Dynamic Programming</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: var(--vp-c-brand-1); margin-bottom: 1rem; font-weight: 600;">Web Development</h4>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="/web-dev/" style="color: var(--vp-c-text-2); text-decoration: none;">Frontend Development</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="/react/" style="color: var(--vp-c-text-2); text-decoration: none;">React</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="/nodejs/" style="color: var(--vp-c-text-2); text-decoration: none;">Node.js</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: var(--vp-c-brand-1); margin-bottom: 1rem; font-weight: 600;">About</h4>
+              <p style="color: var(--vp-c-text-2); margin: 0 0 0.5rem 0;">Comprehensive programming guides and tutorials</p>
+              <p style="margin: 0;"><a href="https://amanraj.me" target="_blank" style="color: var(--vp-c-brand-1); text-decoration: none;">Created by Aman Raj</a></p>
+            </div>
+          </div>
+        </div>
+        <div style="border-top: 1px solid var(--vp-c-border); padding-top: 1.5rem; text-align: center;">
+          
+        </div>
+      `,
+      copyright: 'Copyright © 2025 CodeManuals.tech • Created by <a href="https://amanraj.me" target="_blank" style="color: var(--vp-c-brand-1);">Aman Raj</a>'
     },
 
     search: {
