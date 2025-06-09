@@ -86,7 +86,7 @@ export default defineConfig({
         "description": "Comprehensive understanding of programming concepts, data structures, and algorithms"
       }
     })]
-  },
+  ],
 
   themeConfig: {
     logo: '/icon.png',
