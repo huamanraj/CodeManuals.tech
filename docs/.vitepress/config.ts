@@ -20,9 +20,7 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: 'CodeManuals.tech',
     
-    // Disable Git-dependent features
-    lastUpdated: false,
-    
+  
     nav: [
       { text: 'Home', link: '/' },
       {
