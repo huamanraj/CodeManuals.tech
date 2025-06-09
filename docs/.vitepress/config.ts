@@ -26,7 +26,7 @@ export default defineConfig({
     // Twitter Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@codemanuals' }],
-    ['meta', { name: 'twitter:creator', content: '@amanraj_dev' }],
+    ['meta', { name: 'twitter:creator', content: '@huamanraj' }],
     ['meta', { name: 'twitter:title', content: 'CodeManuals.tech - Master Programming Concepts' }],
     ['meta', { name: 'twitter:description', content: 'Your comprehensive guide to programming concepts, data structures, algorithms, and modern web development.' }],
     ['meta', { name: 'twitter:image', content: 'https://codemanuals.tech/og.png' }],
